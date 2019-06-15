@@ -14,10 +14,10 @@
             <div class="shadow p-3">
                 <form action="" method="post">
                     <div class="form-group">
-                        <input type="text" name="nome" class="form-control" placeholder="Digite seu Nome">
+                        <input type="email" name="nome" class="form-control" placeholder="Digite seu Email">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Digite seu email">
+                        <input type="password" name="senha" class="form-control" placeholder="Digite sua Senha">
                     </div>
                     <div class="form-group">
                         <input type="submin" class="btn btn-outline-sucess">

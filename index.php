@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="shadow p-3">
-                <form action="" method="post">
+                <form action="registro.php" method="post">
                     <div class="form-group">
                         <input type="email" name="nome" class="form-control" placeholder="Digite seu Email">
                     </div>

@@ -34,7 +34,7 @@ ENGINE = InnoDB;
 -- Table `ProjetoTP`.`item`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ProjetoTP`.`item` (
-  `id_item` INT NOT NULL COMMENT '',
+  `id_item` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `id_usuario` INT NOT NULL COMMENT '',
   `nm_item` VARCHAR(45) NOT NULL COMMENT '',
   PRIMARY KEY (`id_item`)  COMMENT '',

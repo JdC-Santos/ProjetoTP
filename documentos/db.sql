@@ -8,20 +8,20 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema ProjetoTP
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema ProjetoTP
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `ProjetoTP` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `ProjetoTP` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`usuario`
+-- Table `ProjetoTP`.`usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`usuario` (
-  `id_usuario` INT NOT NULL COMMENT '',
+CREATE TABLE IF NOT EXISTS `ProjetoTP`.`usuario` (
+  `id_usuario` INT NOT NULL AUTO_INCREMENT COMMENT '',
   `nm_usuario` VARCHAR(45) NOT NULL COMMENT '',
   `nm_email` VARCHAR(45) NOT NULL COMMENT '',
   `cd_senha` VARCHAR(45) NOT NULL COMMENT '',
@@ -31,9 +31,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`item`
+-- Table `ProjetoTP`.`item`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`item` (
+CREATE TABLE IF NOT EXISTS `ProjetoTP`.`item` (
   `id_item` INT NOT NULL COMMENT '',
   `id_usuario` INT NOT NULL COMMENT '',
   `nm_item` VARCHAR(45) NOT NULL COMMENT '',
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`item` (
   INDEX `fk_lista_usuario_idx` (`id_usuario` ASC)  COMMENT '',
   CONSTRAINT `fk_lista_usuario`
     FOREIGN KEY (`id_usuario`)
-    REFERENCES `mydb`.`usuario` (`id_usuario`)
+    REFERENCES `ProjetoTP`.`usuario` (`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

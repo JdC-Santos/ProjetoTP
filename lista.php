@@ -37,11 +37,7 @@ if (isset($_POST['cd'])) {
                     <div class="col-sm-6">
 						<h2>CRUD <b>Itens</b></h2>
 					</div>
-					<div class="col-sm-6">
-						<a href="#ModalAdicionar" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Item</span></a>
-						<a href="#ModalExcluir" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Apagar</span></a>
-					</div>
-                </div>
+								</div>
             </div>
             <table class="table table-striped table-hover">
                 <thead>
@@ -74,7 +70,6 @@ if (isset($_POST['cd'])) {
 												<td><?php echo $item['id_usuario']; ?></td>
                         <td><?php echo $item['nm_item']; ?></td>
                         <td>
-                            <a href="#ModalEditar" id="<?php //echo $forma['CD_FORMA_PGTO']; ?>" nome="<?php //echo $forma['NM_FORMA_PAGTO']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
                             <a href="#ModalExcluir" id="<?php  echo($item['id_item']); ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i></a>
                         </td>
                     </tr>
@@ -97,54 +92,6 @@ if (isset($_POST['cd'])) {
             </div>
         </div>
     </div>
-	<!-- Edit Modal HTML -->
-	<div id="ModalAdicionar" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="lista.php" method="post">
-					<div class="modal-header">
-						<h4 class="modal-title">Adicionar Novo</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
-						<div class="form-group">
-							<label>Item:</label>
-							<input type="text" name="nomepgto" class="form-control" required>
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-						<input type="submit" class="btn btn-success" value="Cadastrar">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- Edit Modal HTML -->
-	<div id="ModalEditar" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="lista.php" method="post">
-					<div class="modal-header">
-						<h4 class="modal-title">Editar Registro</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
-						<div class="form-group">
-							<label>Item</label>
-							<input type="hidden" name="cd" id="cd">
-							<input type="text" name="nome" id="nome" class="form-control" required>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-						<input type="submit" class="btn btn-info" value="Salvar">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 	<!-- Delete Modal HTML -->
 	<div id="ModalExcluir" class="modal fade">
 		<div class="modal-dialog">

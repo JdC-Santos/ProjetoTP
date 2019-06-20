@@ -17,9 +17,17 @@ function ExcluirItem($cd){
 	}
 }
 
+
 // função de alerta
 
 function alert($msg){
 	echo '<script>alert("'.$msg.'");</script>';
 }
+
+function NomeUsuario($id){
+		$sql = "SELECT * FROM usuario WHERE id_usuario=".$id;
+		$res = $GLOBALS['conn']->query($sql);
+		$reserva = $res->fetch_array();
+		return $reserva['nm_usuario'];
+	}
 ?>

@@ -67,7 +67,7 @@ if (isset($_POST['cd'])) {
 							</span>
 						</td>
                         <td><?php echo $item['id_item']; ?></td>
-												<td><?php echo $item['id_usuario']; ?></td>
+												<td><?php echo NomeUsuario($item['id_usuario']); ?></td>
                         <td><?php echo $item['nm_item']; ?></td>
                         <td>
                             <a href="#ModalExcluir" id="<?php  echo($item['id_item']); ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i></a>

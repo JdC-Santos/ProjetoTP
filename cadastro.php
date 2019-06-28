@@ -10,9 +10,14 @@
 
 </head>
 <body>
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-8 offset-md-2 mt-5">
+		<div class="shadow  rounded p-4">
 			<form action="validarcadastro.php" method="post">
+				<div class="form-group">
+					<h4 class="h4 text-center">Cadastro</h4>
+				</div>
 				<div class="form-group">
 					<input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required>
 				</div>
@@ -23,8 +28,10 @@
 					<input type="password" name="password" class="form-control" placeholder="Digite sua senha" required>
 				</div>
 				<div class="form-group">
-					<input type="submit" class="btn btn-outline-sucess"
-					>
+					<input type="submit" class="btn btn-block btn-outline-success">
+				</div>
+				<div class="form-group">
+					<a href="index.php" class="text-primary">Voltar</a>
 				</div>
 				<?php if(isset($_GET['error'])){ 
 					if($_GET['error'] == 1){
@@ -45,6 +52,8 @@
 				<?php } ?>
 			</form>
 		</div>
+		</div>
 	</div>
+</div>
 </body>
 </html>

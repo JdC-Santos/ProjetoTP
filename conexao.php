@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
 $user = "root";
-$password = "";
-$db = "ProjetoTP";
+$password = "usbw";
+$db = "projetotp";
 
 // Create connection
 $conn = new mysqli($server, $user, $password,$db);

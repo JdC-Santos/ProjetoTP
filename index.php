@@ -13,17 +13,21 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="shadow p-3">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <div class="shadow p-3 bg-white rounded">
                 <form action="registro.php" method="post">
-                    <div class="form-group">
+                    <h4 class="h4 text-center">Login</h4>
+                    <div class="form-group mt-3">
                         <input type="email" name="nome" class="form-control" placeholder="Digite seu Email">
                     </div>
                     <div class="form-group">
                         <input type="password" name="senha" class="form-control" placeholder="Digite sua Senha">
                     </div>
                     <div class="form-group">
-                        <input type="submin" class="btn btn-outline-sucess">
+                        <input type="submit" class="btn btn-block btn-outline-success">
+                    </div>
+                    <div class="form-group">
+                        <a href="cadastro.php" class="text-primary">Registre-se</a>
                     </div>
                 </form>
             </div>

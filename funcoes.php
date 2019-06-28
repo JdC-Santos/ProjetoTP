@@ -25,9 +25,34 @@ function alert($msg){
 }
 
 function NomeUsuario($id){
-		$sql = "SELECT * FROM usuario WHERE id_usuario=".$id;
-		$res = $GLOBALS['conn']->query($sql);
-		$reserva = $res->fetch_array();
-		return $reserva['nm_usuario'];
+	$sql = "SELECT * FROM usuario WHERE id_usuario=".$id;
+	$res = $GLOBALS['conn']->query($sql);
+	$reserva = $res->fetch_array();
+	return $reserva['nm_usuario'];
+}
+// função de login 
+
+function Login($email,$senha){
+	$sql = 'SELECT * FROM usuario WHERE nm_email ="'.$email.'" AND cd_senha ='.$senha;
+	include 'conexao.php';
+	if ($conn->query($sql) != FALSE) {
+		header('Location: usuario.php');
+	} else {
+		echo "Erro ao Logar:" . $conn->error;
+		echo $sql;
 	}
+}
+
+// função de cadastro
+
+function Cadastro($nome,$email,$senha){
+	$sql ='INSERT INTO usuario (nm_usuario,nm_email,cd_senha) VALUES ("'.$nome.'","'.$email.'","'.$senha.'")';
+	include 'conexao.php';
+	if ($conn->query($sql) === TRUE) {
+		header('Location: usuario.php');
+	} else {
+		echo "Erro ao Cadastrar:" . $conn->error;
+	}
+	
+}
 ?>

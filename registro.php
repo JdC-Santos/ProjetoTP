@@ -1,5 +1,7 @@
-<?php   
-    var nome = $_REQUEST["nome"];
-    var senha = $_REQUEST["senha"];
+<?php 
+    include 'funcoes.php';
+    session_start();
+    $_SESSION['nome'] = $_REQUEST["nome"];
+    $_SESSION['senha'] = $_REQUEST["senha"];
+    Login($_SESSION['nome'],$_SESSION['senha']);
     
-echo $nome +  " " + $senha;

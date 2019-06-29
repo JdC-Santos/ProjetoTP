@@ -10,7 +10,9 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema ProjetoTP
 -- -----------------------------------------------------
+CREATE DATABASE projetotp;
 
+USE  projetotp;
 -- -----------------------------------------------------
 -- Schema ProjetoTP
 -- -----------------------------------------------------
@@ -29,7 +31,8 @@ CREATE TABLE IF NOT EXISTS `ProjetoTP`.`usuario` (
   UNIQUE INDEX `nm_email_UNIQUE` (`nm_email` ASC)  COMMENT '')
 ENGINE = InnoDB;
 
-
+INSERT INTO `usuario` (`id_usuario`, `nm_usuario`, `nm_email`, `cd_senha`) VALUES
+(null, 'teste', 'teste@gmail.com', '123');
 -- -----------------------------------------------------
 -- Table `ProjetoTP`.`item`
 -- -----------------------------------------------------
@@ -46,6 +49,12 @@ CREATE TABLE IF NOT EXISTS `ProjetoTP`.`item` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `item` (`id_item`, `id_usuario`, `nm_item`) VALUES
+(1, 1, 'item 1'),
+(2, 1, 'item 2'),
+(3, 1, 'item 3'),
+(4, 1, 'item 4'),
+(5, 1, 'item 5');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
